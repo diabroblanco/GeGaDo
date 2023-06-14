@@ -33,7 +33,7 @@
       </div>
 
 <div class="row-md-3 mx-auto p-2 px-3">
-<select class="form-select " aria-label="Default select example" name="opcionBusq" required>
+<select class="form-select " aria-label="Default select example" name="opcionBusq" onchange="carg(this)" required>
     <option selected> </option>
     <option value="nomina">&#128176; Nómina o Pensión</option>
     <option value="venta">&#128176; Venta</option>
@@ -43,9 +43,9 @@
     <option value="subvenciones">&#128076; SUBVENCIONES</option>
     <option value="otros">Otros...</option>
 </select>
-
-
-</div>
+    <input id="nuevoC" id="nuevoC"  >
+    </div>
+    
 </div>
 <div class="row my-auto">
 <div class="col-md-3 mx-auto p-2 px-3">
@@ -76,6 +76,18 @@
       }, false)
     })
   })()
+  
+  var input = document.getElementById('nuevoC');
+
+function carg(elemento) {
+  d = elemento.value;
+  
+  if(d == "otros"){
+    input.disabled = false;
+  }else{
+    input.disabled = true;
+  }
+}
 
 </script>
 </div>
