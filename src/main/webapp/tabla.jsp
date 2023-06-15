@@ -12,13 +12,30 @@
 </head>
 <body>
 <div class="container">
-
-      <a class="btn btn-info mt-3" href="transaccion.jsp">Nueva Transaccion </a>
-      <label for="importe" class="form-label fst-italic mx-auto"><strong><c:out value="${nombreU}"></c:out></strong></label>
-      <a class="btn btn-info mt-3" href="ModificarU.jsp">Editar Usuario </a>
+<div class="container-fluid hstack gap-3">
+      <a class="btn btn-info mt-3 text-center" href="transaccion.jsp?opcion=nuevaTransaccion">Nueva Transaccion </a>
+      <label for="importe" class="form-label fst-italic mx-auto">nombreU<strong><c:out value="${nombreU}"></c:out></strong></label>
+      <a class="btn btn-info mt-3 " href="ModificarU.jsp">Editar Usuario </a>
+      <button class="btn btn-danger mt-3 ">Cerrar Sesion </button>
       
+     <div class="hstack gap-3">
+  <select class="form-select mt-2 " aria-label="Default select example" name="opcionBusq">
+    <option selected>Método de búsqueda</option>
+    <option value="gastos">Gastos</option>
+    <option value="ingresos">Ingresos</option>
+    <option value="nombreC">Categoria</option>
+     </select>
+    
+     
+<select class="form-select mt-2" aria-label="Default select example" name="opcionBusq2" id="selecto">   
+     <c:forEach var="listaC" items="${listaC}">
+    <option value="nombreC"><c:out value="${listaC}"></c:out></option>
+   </c:forEach>
+   </select>
+   </div>
+      <button class="btn btn-outline-dark" type="submit" name="search">Buscar</button>
       
-
+</div>
  <table class="table table-hover">
         <tr>
             <th>ID</th>
@@ -46,5 +63,6 @@
         </c:forEach>
         </table>
 </div>
+
 </body>
 </html>

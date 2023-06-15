@@ -12,6 +12,7 @@
   <hr>
 
   <form class="row g-3 needs-validation" novalidate action="Controller" method="get">
+        <input type="hidden" name="opcion" value="buscar">
   <div class="col-md-4 col-xl-4 mx-auto">
       <label for="nombreU" class="form-label">Nombre Usuario</label>
       <input type="text" class="form-control"  name="nombreU" id="nombreU" maxlength="50" placeholder="Nombre" required>
