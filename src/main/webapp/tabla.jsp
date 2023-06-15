@@ -15,6 +15,8 @@
 
       <a class="btn btn-info mt-3" href="transaccion.jsp">Nueva Transaccion </a>
       <label for="importe" class="form-label fst-italic mx-auto"><strong><c:out value="${nombreU}"></c:out></strong></label>
+      <a class="btn btn-info mt-3" href="ModificarU.jsp">Editar Usuario </a>
+      
       
 
  <table class="table table-hover">
@@ -22,7 +24,7 @@
             <th>ID</th>
             <th>FECHA</th>
             <th>TIPO</th>
-            <th>CLASE</th>
+            <th>CATEGORIA</th>
             <th>CANTIDAD</th>
             <th>ACCIONES</th>
         </tr>
@@ -30,13 +32,13 @@
         <!--RECORRIDO FOR EACH DE LA TABLA-->
         <c:forEach var="tabla" items="${listaA}">
         <tr>
-            <th><c:out value="${tabla.idT}"></c:out></th>
+            <th><c:out value="${tabla.id}"></c:out></th>
             <td><c:out value="${tabla.fechahora}"></c:out></td>
             <td><c:out value="${tabla.nombreT}"/></td>
-            <td><c:out value="${tabla.detalles}"/></td>
+            <td><c:out value="${tabla.nombreC}"/></td>
             <td><c:out value="${tabla.importe}"></c:out></td>
            <td>
-               <a href="Controller?opcion=eliminar&pagina=1&cod=<c:out value='${tabla.idT}'></c:out> " class="btn fs-6"> &#128465;</a>
+               <a href="Controller?opcion=eliminar&pagina=1&cod=<c:out value='${tabla.id}'></c:out>" class="btn fs-6"> &#128465;</a>
            </td>
 
 

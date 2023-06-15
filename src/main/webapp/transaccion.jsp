@@ -33,9 +33,9 @@
       </div>
 
 <div class="row-md-3 mx-auto p-2 px-3">
-		      <label for="importe" class="form-label fst-italic"><strong>Información sobre el movimiento</strong></label>
-		            <label for="importe" class="form-label fst-italic"><strong>(Reducido a una palabra)</strong></label>
-       <input type="text" class="form-control"  name="detalles" id="detalles" maxlength="50" placeholder="Ejemplo: coche, cumpleaños" required>
+		      <label for="nombreC" class="form-label fst-italic"><strong>Información sobre el movimiento</strong></label>
+		            <label for="nombreC" class="form-label fst-italic"><strong>(Reducido a una palabra)</strong></label>
+       <input type="text" class="form-control"  name="nombreC" id="nombreC" maxlength="50" placeholder="Ejemplo: coche, cumpleaños" required>
 </div>
 <h4>Choose your icon</h4>
 <div class="text-end">
@@ -56,40 +56,8 @@
 </div>
 
 </form>
-<script>
-  (() => {
-    'use strict'
+<script src="<c:url value="js/script.js"/>"></script>
 
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
-
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-      }, false)
-    })
-  })()
-  
-  var input = document.getElementById('nuevoC');
-
-function carg(elemento) {
-  d = elemento.value;
-  
-  if(d == "otros"){
-    input.disabled = false;
-  }else{
-    input.disabled = true;
-
-  }
-}
-
-</script>
 </div>
 </body>
 </html>

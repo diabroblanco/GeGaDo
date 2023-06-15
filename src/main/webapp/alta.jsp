@@ -15,6 +15,8 @@
 <h2 class="text-center">Alta de cliente</h2>
   <hr>
   <form class="row g-3 needs-validation" novalidate action="Controller" method="get">
+      <input type="hidden" name="opcion" value="alta">
+  
  <div class="col-md-4 col-xl-4 mx-auto">
       <label for="nombre" class="form-label">Nombre y Apellidos</label>
       <input type="text" class="form-control"  name="nombre" id="nombre" maxlength="50" placeholder="Nombre y Apellidos" required>
@@ -35,7 +37,11 @@
   </div>
   <div class="col-auto">
     <input type="password" id="passU" name="passU" class="form-control" aria-labelledby="passwordHelpInline" pattern="(?=.*\d)(?=.*[\W_]).{8,}" required placeholder="8 caracteres mínimo, debe teber un caracter especial y numero">
+     <div class="invalid-feedback">
+      Contraseña Maaaaaaaal
+      </div>
   </div>
+   
   <div class="col-auto">
 
   </div>
@@ -50,26 +56,8 @@
 </div>
     </div>
 </form>
-<script>
-  (() => {
-    'use strict'
+<script src="<c:url value="js/script.js"/>"></script>
 
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
-
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-      }, false)
-    })
-  })()
-</script>
 </div>
 
 
