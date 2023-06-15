@@ -33,19 +33,18 @@
       </div>
 
 <div class="row-md-3 mx-auto p-2 px-3">
-<select class="form-select " aria-label="Default select example" name="opcionBusq" onchange="carg(this)" required>
-    <option selected> </option>
-    <option value="nomina">&#128176; Nómina o Pensión</option>
-    <option value="venta">&#128176; Venta</option>
-    <option value="coche">&#9936; Coche</option>
-    <option value="compra">&#128717; Compra</option>
-    <option value="regalos">&#127874; Regalos</option>
-    <option value="subvenciones">&#128076; SUBVENCIONES</option>
-    <option value="otros">Otros...</option>
-</select>
-    <input id="nuevoC" id="nuevoC"  >
-    </div>
-    
+		      <label for="importe" class="form-label fst-italic"><strong>Información sobre el movimiento</strong></label>
+		            <label for="importe" class="form-label fst-italic"><strong>(Reducido a una palabra)</strong></label>
+       <input type="text" class="form-control"  name="detalles" id="detalles" maxlength="50" placeholder="Ejemplo: coche, cumpleaños" required>
+</div>
+<h4>Choose your icon</h4>
+<div class="text-end">
+<c:forEach items="${icon}" var="icon">
+<input type="checkbox" class="btn-check" name="icon" autocomplete="off" id="icon" value="<c:out value="${icon}"/>">
+<img src="<c:url value="${icon}"></c:url>" class="btn" alt="icono" width="70">
+
+</c:forEach>
+</div>
 </div>
 <div class="row my-auto">
 <div class="col-md-3 mx-auto p-2 px-3">
@@ -86,6 +85,7 @@ function carg(elemento) {
     input.disabled = false;
   }else{
     input.disabled = true;
+
   }
 }
 
