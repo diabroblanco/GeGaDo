@@ -23,15 +23,10 @@
     <option selected>Método de búsqueda</option>
     <option value="gastos">Gastos</option>
     <option value="ingresos">Ingresos</option>
-    <option value="nombreC">Categoria</option>
+ 
      </select>
     
-     
-<select class="form-select mt-2" aria-label="Default select example" name="opcionBusq2" id="selecto">   
-     <c:forEach var="listaC" items="${listaC}">
-    <option value="nombreC"><c:out value="${listaC}"></c:out></option>
-   </c:forEach>
-   </select>
+
    </div>
       <button class="btn btn-outline-dark" type="submit" name="search">Buscar</button>
       
