@@ -63,5 +63,5 @@
 
 </body>
 </html>
-<!-- Esto es un comentario -->
+<!-- Antes del pull -->
 <!-- Esto es otro comentario -->
