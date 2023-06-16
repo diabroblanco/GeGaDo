@@ -15,7 +15,7 @@
   <!--Enviamos el formulario que lo lea el Controller -->
   <form action="Controller"  method="get" class="needs-validation text-center" novalidate >
 
-    <input type="hidden" name="opcion" value="ejecutaModificacion">
+    <input type="hidden" name="opcion" value="modificacion">
 	<input type="hidden" name="nombre" value='<c:out value="${nombre}"></c:out>'>
 
 

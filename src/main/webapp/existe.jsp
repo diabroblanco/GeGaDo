@@ -11,7 +11,7 @@
 <h2 class="text-center">Inicio Sesión</h2>
   <hr>
 
-  <form class="row g-3 needs-validation" novalidate action="Controller" method="get">
+  <form class="row g-3 needs-validation" novalidate action="Controller" method="post">
         <input type="hidden" name="opcion" value="buscar">
   <div class="col-md-4 col-xl-4 mx-auto">
       <label for="nombreU" class="form-label">Nombre Usuario</label>

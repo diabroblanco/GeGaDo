@@ -13,9 +13,9 @@
 <body>
 <div class="container">
 <div class="container-fluid hstack gap-3">
-      <a class="btn btn-info mt-3 text-center" href="transaccion.jsp?opcion=nuevaTransaccion">Nueva Transaccion </a>
-      <label for="importe" class="form-label fst-italic mx-auto p-3">nombreU<strong><c:out value="${nombreU}"></c:out>&#129503;</strong></label>
-      <a class="btn btn-info mt-3 " href="ModificarU.jsp">Editar Usuario </a>
+      <a class="btn btn-info mt-3 text-center" href="Controller/?opcion=nuevaTransaccion">Nueva Transaccion </a>
+      <label for="importe" class="form-label fst-italic mx-auto p-3"><strong><c:out value="${nombreU}"></c:out>&#129503;</strong></label>
+      <a class="btn btn-info mt-3 " href="Controller/?opcion=modificacion">Editar Usuario </a>
       <button class="btn btn-danger mt-3 ">Cerrar Sesion </button>
       
      <div class="hstack gap-3">

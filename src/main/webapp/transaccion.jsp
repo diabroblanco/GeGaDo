@@ -38,9 +38,12 @@
      <option selected> </option>
     <option value="">GHOLa</option> 
     <c:forEach items="${listaC}" var="cats">
-    <option><c:out value="${listaC.icono}"></c:out><c:out value="${listaC.nombreC}"></c:out></option> 
+    <option value="${cats.nombreC}"><c:out value="${cats.icono}"></c:out><c:out value="${cats.nombreC}"></c:out></option> 
+    	<input type="hidden" name="idCat" value='<c:out value="${cats.idC}"></c:out>'>
+
     </c:forEach>
 </select>
+	
 		      <label for="detalles" class="form-label fst-italic"><strong>Información sobre el movimiento</strong></label>
        <input type="text" class="form-control"  name="detalles" id="detalles" maxlength="50" placeholder="Ejemplo: compra de la semana" required>
 </div>
