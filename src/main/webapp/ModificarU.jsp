@@ -16,14 +16,14 @@
   <form action="Controller"  method="get" class="needs-validation text-center" novalidate >
 
     <input type="hidden" name="opcion" value="ejecutaModificacion">
-
+	<input type="hidden" name="nombre" value='<c:out value="${nombre}"></c:out>'>
 
 
     <div class="needs-validation">
       <div class="row">
         <div class="col-md-4 mx-auto">
-          <label for="nombre" class="form-label">Nombre Usuario</label>
-          <input type="text" class="form-control" id="nombre" name="nombre" required maxlength="50"
+          <label for="nombreU" class="form-label">Nombre Usuario</label>
+          <input type="text" class="form-control" id="nombreU" name="nombreU" required maxlength="50"
                  value='<c:out value="${nombreU}"></c:out>'>
           <div class="invalid-feedback">
             Nombre requerido!

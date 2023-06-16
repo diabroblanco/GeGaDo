@@ -33,18 +33,18 @@
       </div>
 
 <div class="row-md-3 mx-auto p-2 px-3">
-		      <label for="nombreC" class="form-label fst-italic"><strong>Información sobre el movimiento</strong></label>
-		            <label for="nombreC" class="form-label fst-italic"><strong>(Reducido a una palabra)</strong></label>
-       <input type="text" class="form-control"  name="nombreC" id="nombreC" maxlength="50" placeholder="Ejemplo: coche, cumpleaños" required>
-</div>
-<h4>Choose your icon</h4>
-<div class="text-end">
-<c:forEach items="${icon}" var="icon">
-<input type="checkbox" class="btn-check" name="icon" autocomplete="off" id="icon" value="<c:out value="${icon}"/>">
-<img src="<c:url value="${icon}"></c:url>" class="btn" alt="icono" width="70">
 
-</c:forEach>
+    <select class="form-select " aria-label="Default select example" name="eleccionC" required>
+     <option selected> </option>
+    <option value="">GHOLa</option> 
+    <c:forEach items="${listaC}" var="cats">
+    <option><c:out value="${listaC.icono}"></c:out><c:out value="${listaC.nombreC}"></c:out></option> 
+    </c:forEach>
+</select>
+		      <label for="detalles" class="form-label fst-italic"><strong>Información sobre el movimiento</strong></label>
+       <input type="text" class="form-control"  name="detalles" id="detalles" maxlength="50" placeholder="Ejemplo: compra de la semana" required>
 </div>
+
 </div>
 <div class="row my-auto">
 <div class="col-md-3 mx-auto p-2 px-3">
