@@ -4,6 +4,8 @@
 <html lang="es">
 <head>
   <title>Gegado</title>
+        <link rel="stylesheet" href="css/styletransaccion.css" type="text/css">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </head>
@@ -15,17 +17,16 @@
 <hr>
 <hr>
 </div>
-<div class="row border border-black mx-auto">
-<div class="text-start">
+<div class=" border border-black mx-auto" id="border">
 <input type="radio" id="ingresos" name="categoria" value="ingresos" class="mt-4" required>
 <label for="ingresos"><strong>Ingresos</strong></label><br>
 <input type="radio" id="gastos" name="categoria" value="gastos" class="mt-3">
 <label for="gastos"><strong>Gastos</strong></label><br>
-</div>
+
 <div class="invalid-feedback">
      Tienes que seleccionar uno
       </div>
-<div class="col-md-3 ">
+<div class="mt-4 text-center">
       <label for="importe" class="form-label fst-italic"><strong>Importe</strong></label>
       <input type="number" class="form-control" id="importe" name="importe" required max="999999" min="0" step="0.01" required>
       <div class="invalid-feedback">
@@ -34,7 +35,7 @@
 
 <div class="row-md-3 mx-auto p-2 px-3">
 
-    <select class="form-select " aria-label="Default select example" name="eleccionC" required>
+    <select class=" form-select " id="eleccionC" aria-label="Default select example" name="eleccionC" required>
      <option selected> </option>
     <option value="">GHOLa</option> 
     <c:forEach items="${listaC}" var="cats">
