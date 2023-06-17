@@ -7,11 +7,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Información</title>
+        <link rel="stylesheet" href="css/styletabla.css" type="text/css">
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="container">
+<div class="central">
 <div class="container-fluid hstack gap-3">
       <a class="btn btn-info mt-3 text-center" href="Controller/?opcion=nuevaTransaccion">Nueva Transaccion </a>
       <label for="importe" class="form-label fst-italic mx-auto p-3"><strong><c:out value="${nombreU}"></c:out>&#129503;</strong></label>
